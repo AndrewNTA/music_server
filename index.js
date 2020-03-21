@@ -32,7 +32,7 @@ app.use(morgan("dev")); // configire morgan
 app.use('/uploads', express.static('uploads'));
 // define first route
 app.get("/", (req, res) => {
-  res.json("Hola MEVN devs...Assemble");
+  res.json("Hello world");
 });
 
 const musicRoutes = require("./api/routes/music"); //bring in our user routes
