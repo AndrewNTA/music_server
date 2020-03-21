@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const config = require("./config/db");
 const app = express();
 //configure database and mongoose
+console.log("Current database is", config.database);
 mongoose.set("useCreateIndex", true);
 mongoose
   .connect(config.database, { useNewUrlParser: true })
