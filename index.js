@@ -3,6 +3,7 @@ const PORT = process.env.PORT || 4200;
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const config = require("./config/db");
 const app = express();
 //configure database and mongoose
@@ -20,7 +21,7 @@ mongoose
   });
 // db configuaration ends here
 //registering cors
-// app.use(cors());
+app.use(cors());
 //configure body parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
