@@ -12,7 +12,7 @@ mongoose.set("useCreateIndex", true);
 mongoose
   .connect(config.database, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
-    console.log("Database is connected");
+    console.log("Database is connected !!!");
   })
   .catch(err => {
     console.log("ERROR Database now", config.database);
@@ -30,7 +30,7 @@ app.use(morgan("dev")); // configire morgan
 app.use('/uploads', express.static('uploads'));
 // define first route
 app.get("/", (req, res) => {
-  res.json("Hello world");
+  res.json("Hello world everyone");
 });
 
 const musicRoutes = require("./api/routes/music"); //bring in our user routes
