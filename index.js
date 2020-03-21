@@ -8,8 +8,7 @@ const config = require("./config/db");
 const app = express();
 //configure database and mongoose
 
-// const uri = "mongodb+srv://andrew_user:concuagio95@andrew-anjff.mongodb.net/test?retryWrites=true&w=majority";
-console.log("Current database config", config.database)
+console.log("Current database config", config.database);
 mongoose.set("useCreateIndex", true);
 mongoose
   .connect(config.database, { useNewUrlParser: true, useUnifiedTopology: true })
