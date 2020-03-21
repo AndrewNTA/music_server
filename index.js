@@ -12,7 +12,7 @@ const uri = "mongodb+srv://andrew_user:concuagio95@andrew-anjff.mongodb.net/test
 
 mongoose.set("useCreateIndex", true);
 mongoose
-  .connect(uri, { useNewUrlParser: true })
+  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("Database is connected");
   })
