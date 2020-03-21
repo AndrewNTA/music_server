@@ -16,6 +16,7 @@ mongoose
     console.log("Database is connected");
   })
   .catch(err => {
+    console.log("ERROR Database now", config.database);
     console.log({ database_error: err });
   });
 // db configuaration ends here
