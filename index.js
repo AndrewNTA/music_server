@@ -7,10 +7,12 @@ const mongoose = require("mongoose");
 const config = require("./config/db");
 const app = express();
 //configure database and mongoose
-console.log("Current database is", config.database);
+
+const uri = "mongodb+srv://andrew_user:concuagio95@andrew-anjff.mongodb.net/test?retryWrites=true&w=majority";
+
 mongoose.set("useCreateIndex", true);
 mongoose
-  .connect(config.database, { useNewUrlParser: true })
+  .connect(uri, { useNewUrlParser: true })
   .then(() => {
     console.log("Database is connected");
   })
